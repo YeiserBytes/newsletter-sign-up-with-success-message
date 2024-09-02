@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-tomato: hsl(4, 100%, 67%);
+    --color-dark-slate-grey: hsl(234, 29%, 20%);
+    --color-charcoal-grey: hsl(235, 18%, 26%);
+    --color-grey: hsl(231, 7%, 60%);
+    --color-white: hsl(0, 0%, 100%);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100dvh;
+    min-width: 100dvw;
+    font-family: "Roboto", sans-serif;
+    font-size: 1em;
+    background-color: var(--color-charcoal-grey);
+    color: var(--color-dark-slate-grey);
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 2em;
+    background-color: var(--color-white);
+    padding: 1.5em;
+    gap: 2em;
+    overflow: hidden;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1.5em;
+    padding: 3em 3em;
+}
+
+.card-info h1 {
+    font-size: 3.5rem;
+}
+
+.card-info p {
+    max-width: 40ch;
+}
+
+.card-info ul {
+    display: flex;
+    gap: .8em;
+    flex-direction: column;
+    list-style: none;
+}
+
+.card-info ul li {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+.card-info form label {
+    font-weight: 700;
+    font-size: .7rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-top: 1.5rem;
+}
+
+.card-info form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.card-info form input, .btn-dismiss {
+    width: inherit;
+    padding: 1rem;
+    border: 1px solid var(--color-grey);
+    border-radius: .5em;
+    outline: none;
+}
+
+.form-email label > .form-label {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+}
+
+.form-email #email:valid {
+    background-color: rgba(255, 98, 87, .2);
+    border: 1px solid var(--color-tomato);
+}
+
+.form-email label > .form-label > :nth-last-child(1) {
+    opacity: 0;
+    color: var(--color-tomato);
+    font-size: .7rem;
+}
+
+form > input[type="submit"], .btn-dismiss {
+    background-color: var(--color-dark-slate-grey);
+    color: var(--color-white);
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow .3s;
+
+    &:hover {
+        background: linear-gradient(90deg, rgba(255,0,151,1) 0%, rgba(255,106,0,1) 100%);
+        box-shadow:
+        0px 5px 20px rgba(255,0,151,.4),
+        0px 5px 20px rgba(255,106,0,.4);
+    }
+}
+
+.attribution {
+    position: absolute;
+    bottom: 1em;
+    color: var(--color-grey);
+}
+
+@media screen and (max-width: 600px) {
+    .card {
+        border-radius: 0;
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+    }
+
+    .attribution {
+        display: none;
+    }
+}

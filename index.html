@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+		<title>
+			Frontend Mentor | Newsletter sign-up form with success message
+		</title>
+		<link
+			rel="stylesheet"
+			href="./src/styles.css"
+		/>
+	</head>
+	<body>
+		<main class="card">
+			<section class="card-info">
+				<h1>Stay updated!</h1>
+				<p>
+					Join 60,000+ product managers receiving monthly updates on:
+				</p>
+				<ul>
+					<li>
+						<img
+							src="./assets/images/icon-list.svg"
+							alt=""
+						/>
+						Product discovery and building what matters
+					</li>
+					<li>
+						<img
+							src="./assets/images/icon-list.svg"
+							alt=""
+						/>
+						Measuring to ensure updates are a success
+					</li>
+					<li>
+						<img
+							src="./assets/images/icon-list.svg"
+							alt=""
+						/>
+						And much more!
+					</li>
+				</ul>
+
+				<form id="form-submit" class="form-email">
+					<label>
+						<div class="form-label">
+						<span>Email address</span>
+						<span>Valid email required</span>
+						</div>
+						<input type="email" name="email" id="email" placeholder="email@company.com" required>
+					</label>
+					<input type="submit" value="Subscribe to monthly newsletter">
+				</form>
+			</section>
+
+			<picture class="card-image">
+				<source
+					media="(min-width: 650px)"
+					srcset="./assets/images/illustration-sign-up-desktop.svg"
+				/>
+				<img
+					src="./assets/images/illustration-sign-up-mobile.svg"
+					alt="illustration image"
+				/>
+			</picture>
+		</main>
+
+		<div class="attribution">
+			Challenge by
+			<a
+				href="https://www.frontendmentor.io?ref=challenge"
+				target="_blank"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>.
+		</div>
+    	<script src="./src/main.js"></script>
+	</body>
+</html>
